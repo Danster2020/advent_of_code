@@ -1,0 +1,1 @@
+Part1 has horrible inefficient solution. Took several minutes to complete.
