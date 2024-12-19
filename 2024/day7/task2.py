@@ -18,9 +18,9 @@ with open("data.txt") as file:
             if len(comb) == 0:
                 comb.append(int(digit))
                 continue
-            # print("TEST", comb)
-            if len(comb) > 1:
-                comb.pop(0)
+            prev_comb = copy.deepcopy(comb)
+            # if len(comb) > 1:
+                # comb.pop(0)
             list1 = copy.deepcopy(comb)
             for el in list1:
                 addition = int(digit) + int(el)
@@ -33,6 +33,10 @@ with open("data.txt") as file:
                     comb.append(multiplication)
                 if not concatination > int(control):
                     comb.append(concatination)
+            new_comb = [x for x in comb if x not in prev_comb]
+            comb = new_comb
+            # print("TEST", comb)
+            
         
         if comb.count(int(control)) > 0:
             sum += int(control)
