@@ -16,3 +16,5 @@ touch $target_dir/task1.py
 touch $target_dir/task2.py
 touch $target_dir/puzzle.txt
 touch $target_dir/puzzle_ex.txt
+
+echo "Created day $day in year $year."
