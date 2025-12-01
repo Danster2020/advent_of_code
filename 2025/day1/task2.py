@@ -2,7 +2,6 @@ list = []
 with open("puzzle.txt") as file:
     for row in file:
         list.append(row.strip())
-print(list)
 
 def rotate(curr_val: int, command: str):
     letter = command[0]
